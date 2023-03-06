@@ -1,7 +1,50 @@
-[gd_scene format=3 uid="uid://euu4vh6q83ye"]
+[gd_scene load_steps=3 format=3 uid="uid://euu4vh6q83ye"]
+
+[ext_resource type="Texture2D" uid="uid://giuggpb01kqj" path="res://icon.svg" id="1_3xuqx"]
+[ext_resource type="Script" path="res://MainPage.gd" id="1_ntor6"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ntor6")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TopBar" type="PanelContainer" parent="."]
+self_modulate = Color(0, 0, 0, 0.780392)
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+
+[node name="Hbox" type="HBoxContainer" parent="TopBar"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="TopBar/Hbox"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture_normal = ExtResource("1_3xuqx")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="SidePanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -200.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SidePanel"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
