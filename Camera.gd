@@ -1,5 +1,5 @@
 extends Node3D
-
+var focus: bool = false
 @export var target : NodePath
 
 @export_range(0.0, 2.0) var rotation_speed : float = PI/2
@@ -42,6 +42,8 @@ func get_input_keyboard(delta):
 	$InnerGimbal.rotate_object_local(Vector3.RIGHT, x_rotation * rotation_speed * delta)
 
 func _process(delta):
+	if !focus:
+		return
 	get_mouse(delta)
 	get_input_keyboard(delta)
 	$InnerGimbal.rotation.x = clamp($InnerGimbal.rotation.x, -1.4, -0.01)

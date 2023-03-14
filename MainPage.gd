@@ -1,6 +1,7 @@
 extends Control
 var button_menu = preload("res://ButtonMenu.tscn")
-var preview_3d = preload("res://3DView.tscn")
+var projects_view = preload("res://ProjectsView.tscn")
+var preview_3d = preload("res://3DProject.tscn")
 
 func _ready():
 	$TopBar/Hbox/TextureButton.connect("pressed",ExpandMainMenu)
@@ -18,10 +19,21 @@ func _ready():
 	products_menu.add_button("ADVANCED MOVEMENT SYSTEM GODOT",Callable(self,"amsg"))
 	$SidePanel/VBoxContainer.add_child(products_menu)
 	
+	var view = projects_view.instantiate()
+	$PanelContainer/Control.add_sibling(view)
+	
+	
 	var donut_preview = preview_3d.instantiate()
-	$Control.add_sibling(donut_preview)
 	donut_preview.assign_render_image(load("res://3DScenes/DonutTutorial/donutRender.png"))
 	donut_preview.assign_scene(load("res://3DScenes/Donut.tscn").instantiate())
+	
+	view.add_project_scene(donut_preview)
+	
+	var donut_preview1 = preview_3d.instantiate()
+	donut_preview1.assign_render_image(load("res://3DScenes/DonutTutorial/donutRender.png"))
+	donut_preview1.assign_scene(load("res://3DScenes/Donut.tscn").instantiate())
+	
+	view.add_project_scene(donut_preview1)
 
 	
 

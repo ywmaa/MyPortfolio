@@ -1,0 +1,126 @@
+[gd_scene load_steps=4 format=3 uid="uid://css6u5bivdq2i"]
+
+[ext_resource type="Script" path="res://3DProject.gd" id="1_eexn4"]
+[ext_resource type="Texture2D" uid="uid://c5afwkl3ryf6r" path="res://3DScenes/DonutTutorial/donutRender.png" id="1_mgsy2"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ey1bf"]
+viewport_path = NodePath("SubViewport")
+
+[node name="3DProject" type="HBoxContainer" node_paths=PackedStringArray("viewport", "viewport_sprite", "render_image")]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+mouse_filter = 0
+alignment = 1
+script = ExtResource("1_eexn4")
+viewport = NodePath("SubViewport")
+viewport_sprite = NodePath("Control/Control/ViewportSprite")
+render_image = NodePath("Control2/TextureRect")
+
+[node name="Control2" type="Panel" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -300.0
+offset_right = 98.0
+offset_bottom = -277.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "Final Render in Blender"
+fit_content = true
+shortcut_keys_enabled = false
+
+[node name="TextureRect" type="TextureRect" parent="Control2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -272.0
+offset_right = 302.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mgsy2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Control" type="Panel" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = 249.0
+offset_right = 214.0
+offset_bottom = 318.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center][b]Pan[/b] : WASD or Arrow Keys
+[b]Zoom[/b] : +/- Keys on the keyboard     [b]Play Animation[/b] : Space"
+fit_content = true
+shortcut_keys_enabled = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -271.0
+offset_top = -302.0
+offset_right = 214.0
+offset_bottom = -255.993
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]WebGl Preview
+Quality will be a lot lower compared to render"
+fit_content = true
+shortcut_keys_enabled = false
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -330.0
+offset_right = 3.0
+offset_bottom = -330.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ViewportSprite" type="Sprite2D" parent="Control/Control"]
+position = Vector2(-33, 331)
+texture = SubResource("ViewportTexture_ey1bf")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+handle_input_locally = false
+size = Vector2i(500, 500)
+render_target_update_mode = 4
