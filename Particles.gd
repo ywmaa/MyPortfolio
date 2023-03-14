@@ -27,7 +27,7 @@ func _ready() -> void:
 
 func reset_po(po:Po):
 	var radius = get_rect()
-	po.position = Vector2(randf() * radius.size.x, randf() * radius.size.y)
+	po.position = Vector2(randf_range(0,1000), randf_range(0,1000))
 	po.velocity = Vector2.RIGHT.rotated(randf() * TAU) * randf_range(min_velocity, max_velocity)
 	po.radius = randf_range(min_radius, max_radius)
 	po.life = 0.0
@@ -70,10 +70,12 @@ func _draw() -> void :
 		else :
 			pA.velocity2 = Vector2.ZERO
 		# check for valid second point
-		for b in range( points.size() ) :
-			if a <= b :
-				continue
+		for b in range(a,a+100) : # better than b in points.size() because the mentioned algo has an N^2 Big O while currently it is N*100 Big O
+#			if a <= b : #useless since I just start with the "a" variable as the first index 
+#				continue
 			# this is a valid pair of points (ie. a line)
+			if b >= points.size():
+				continue
 			pB = points[b]
 			# draw lines if points are close enough
 			var distance = pA.position.distance_to(pB.position)

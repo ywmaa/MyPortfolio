@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 Global="*res://Global.gd"
 
+[display]
+
+window/size/viewport_width=648
+window/size/viewport_height=1152
+
 [input]
 
 cam_zoom_in={

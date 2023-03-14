@@ -13,8 +13,6 @@ func _ready():
 	$VBoxContainer/ExpandButton.connect("pressed",ShowHideButtons)
 
 
-func _process(delta):
-	pass
 func ShowHideButtons():
 	if buttons[0].visible:
 		for button in buttons:
