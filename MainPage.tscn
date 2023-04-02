@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://euu4vh6q83ye"]
 
-[ext_resource type="Texture2D" uid="uid://giuggpb01kqj" path="res://icon.svg" id="1_3xuqx"]
 [ext_resource type="Script" path="res://MainPage.gd" id="1_ntor6"]
 [ext_resource type="Script" path="res://Particles.gd" id="2_bm0cx"]
+[ext_resource type="Texture2D" uid="uid://dbdmbui6y4w6y" path="res://icon.jpg" id="3_q8gvr"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -26,8 +26,8 @@ grow_vertical = 2
 [node name="Control" type="Control" parent="PanelContainer"]
 layout_mode = 2
 script = ExtResource("2_bm0cx")
-max_points = 100
-max_line_length = 500.0
+max_points = 50
+max_line_length = 750.0
 max_radius = 4.0
 point_color = Color(0.501961, 0.00392157, 0.909804, 1)
 line_color = Color(0, 0.760784, 0.945098, 1)
@@ -47,7 +47,7 @@ layout_mode = 2
 [node name="TextureButton" type="TextureButton" parent="TopBar/Hbox"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-texture_normal = ExtResource("1_3xuqx")
+texture_normal = ExtResource("3_q8gvr")
 ignore_texture_size = true
 stretch_mode = 5
 
