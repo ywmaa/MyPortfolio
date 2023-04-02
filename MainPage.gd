@@ -80,8 +80,8 @@ func learning():
 	
 	
 	var donut_preview = preview_3d.instantiate()
-	donut_preview.assign_render_image(load("res://3DScenes/DonutTutorial/donutRender.png"))
-	donut_preview.assign_scene(preload("res://3DScenes/DonutTutorial/Donut.tscn").instantiate())
+	donut_preview.assign_render_image(load("res://3DScenes/DonutTutorial/donutRender.jpeg"))
+	donut_preview.assign_scene(preload("res://3DScenes/DonutTutorial/Donut.scn").instantiate())
 	donut_preview.set_note('The first tutorial I used to learn blender, the awesome tutorial is from "Blender Guru" of course :) ')
 	
 	view.add_project_scene(donut_preview)
@@ -94,13 +94,13 @@ func learning():
 	view.add_project_scene(apple_preview)
 	
 	var eevee_env_preview = preview_3d.instantiate()
-	eevee_env_preview.assign_render_image(load("res://3DScenes/EeveeEnv1/EeveeEnv1.png"))
+	eevee_env_preview.assign_render_image(load("res://3DScenes/EeveeEnv1/EeveeEnv1.jpeg"))
 	eevee_env_preview.set_note('thanks for "Ducky 3D" for providing a tutorial for this simple abstract environment in eevee engine (blender), also I use "Humen Generator V3 3D" addon for blender')
 	view.add_project_scene(eevee_env_preview)
 	
 	
 	var planet_preview = preview_3d.instantiate()
-	planet_preview.assign_render_image(load("res://3DScenes/Planet/Planet.png"))
+	planet_preview.assign_render_image(load("res://3DScenes/Planet/Planet.jpeg"))
 	planet_preview.set_note('by learning from different tutorials for creating Planet Earth, this is what I got.')
 	view.add_project_scene(planet_preview)
 	
