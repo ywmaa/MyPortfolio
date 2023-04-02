@@ -34,5 +34,12 @@ func assign_render_image(tex:Texture2D):
 func assign_scene(node:Node3D):
 	if viewport:
 		for child in viewport.get_children():
+			$Control/Control/ViewportSprite/NoSceneWarning.visible = true
+			$Control/ControlGuide.visible = false
 			child.queue_free()
 		viewport.add_child(node)
+		$Control/Control/ViewportSprite/NoSceneWarning.visible = false
+		$Control/ControlGuide.visible = true
+
+func set_note(text:String):
+	$Control2/Notes.text = text

@@ -15,7 +15,7 @@ var focus: bool = false
 @export var min_zoom : float = 0.4
 @export_range(0.05, 1.0) var zoom_speed : float = 1.0
 
-var zoom = 1.5
+@export var zoom = 1.0
 
 func get_mouse(delta):
 	if Input.is_action_pressed("cam_zoom_in"):

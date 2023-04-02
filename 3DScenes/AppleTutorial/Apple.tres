@@ -1,0 +1,45 @@
+[gd_resource type="VisualShader" load_steps=4 format=3 uid="uid://bo6cnexg1x2ah"]
+
+[ext_resource type="Texture2D" uid="uid://bjppnqd2d045b" path="res://3DScenes/AppleTutorial/textures/ApplesWithKnife_apple_paint.jpeg" id="1_fwn78"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_rkqgs"]
+texture = ExtResource("1_fwn78")
+texture_type = 1
+
+[sub_resource type="VisualShaderNodeColorFunc" id="VisualShaderNodeColorFunc_lfp4o"]
+output_port_for_preview = 0
+
+[resource]
+code = "shader_type spatial;
+uniform sampler2D tex_frg_2 : source_color;
+
+
+
+void fragment() {
+// Texture2D:2
+	vec4 n_out2p0 = texture(tex_frg_2, UV);
+
+
+	vec3 n_out3p0;
+// ColorFunc:3
+	{
+		vec3 c = vec3(n_out2p0.xyz);
+		float max1 = max(c.r, c.g);
+		float max2 = max(max1, c.b);
+		n_out3p0 = vec3(max2, max2, max2);
+	}
+
+
+// Output:0
+	ALBEDO = vec3(n_out2p0.xyz);
+	ROUGHNESS = n_out3p0.x;
+
+
+}
+"
+graph_offset = Vector2(-146.019, 143.963)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_rkqgs")
+nodes/fragment/2/position = Vector2(-120, 80)
+nodes/fragment/3/node = SubResource("VisualShaderNodeColorFunc_lfp4o")
+nodes/fragment/3/position = Vector2(120, 320)
+nodes/fragment/connections = PackedInt32Array(2, 0, 3, 0, 3, 0, 0, 3, 2, 0, 0, 0)

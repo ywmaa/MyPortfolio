@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcs3aqv23f7pe"
 path.s3tc="res://.godot/imported/Donut Base.png-92a578738200074e3c663c35388800c4.s3tc.ctex"
+path.etc2="res://.godot/imported/Donut Base.png-92a578738200074e3c663c35388800c4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://3DScenes/DonutTutorial/Donut Base.png"
-dest_files=["res://.godot/imported/Donut Base.png-92a578738200074e3c663c35388800c4.s3tc.ctex"]
+dest_files=["res://.godot/imported/Donut Base.png-92a578738200074e3c663c35388800c4.s3tc.ctex", "res://.godot/imported/Donut Base.png-92a578738200074e3c663c35388800c4.etc2.ctex"]
 
 [params]
 
