@@ -1,6 +1,8 @@
 extends Node3D
 var focus: bool = false
 @export var target : NodePath
+@export var animation_player : AnimationPlayer
+@export var animation_name : String
 
 @export_range(0.0, 2.0) var rotation_speed : float = PI/2
 
@@ -24,6 +26,13 @@ func get_mouse(delta):
 	zoom = clamp(zoom, min_zoom, max_zoom)
 
 func get_input_keyboard(delta):
+	if Input.is_action_just_pressed("PlayAnim"):
+		if animation_player:
+			animation_player.assigned_animation = animation_name
+			if animation_player.is_playing():
+				animation_player.pause()
+			else:
+				animation_player.play()
 	# Rotate outer gimbal around y axis
 	var y_rotation = 0
 	if Input.is_action_pressed("cam_right"):
