@@ -5,7 +5,6 @@ var focus: bool = false
 @export_range(0.0, 2.0) var rotation_speed : float = PI/2
 
 # mouse properties
-@export var mouse_control : bool = false
 @export_range(0.001, 0.1) var mouse_sensitivity : float = 0.005
 @export var invert_y : bool = false
 @export var invert_x : bool = false

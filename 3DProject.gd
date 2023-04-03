@@ -12,7 +12,16 @@ var focus : bool = false:
 @export var viewport_sprite : Sprite2D
 @export var render_image : TextureRect
 
+
 func _process(delta):
+	var scroll_percentage = (get_parent().get_parent().scroll_vertical+get_viewport().size.y/2)/get_rect().position.y
+	scroll_percentage = clamp(scroll_percentage,0.0,1.0)
+	$Control2.position.x = lerp($Control2.position.x,lerp(-($Control2.size.x),0.0,scroll_percentage),delta*10)
+	$Control.position.x = lerp($Control.position.x,lerp(get_viewport().size.x+$Control.size.x,$Control.size.x+4.0,scroll_percentage),delta*10)
+	
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and focus:
+		get_parent().get_parent().scroll_horizontal += -(Input.get_last_mouse_velocity()/100).x
+		get_parent().get_parent().scroll_vertical += -(Input.get_last_mouse_velocity()/100).y
 	focus = get_global_rect().has_point(get_global_mouse_position())
 
 func _ready():

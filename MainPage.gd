@@ -50,6 +50,7 @@ func _generate_menu_buttons():
 
 
 func _process(delta):
+	
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and get_global_mouse_position().x > 200:
 		if $SidePanel.position.x == 0:
 			ExpandMainMenu()
