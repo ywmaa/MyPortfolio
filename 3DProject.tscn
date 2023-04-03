@@ -170,5 +170,6 @@ text = "[center][color=yellow][font_size=24]Can't Provide 3D Preview
 [node name="SubViewport" type="SubViewport" parent="."]
 own_world_3d = true
 handle_input_locally = false
+canvas_item_default_texture_repeat = 1
 size = Vector2i(500, 500)
 render_target_update_mode = 4

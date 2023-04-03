@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjppnqd2d045b"
-path.bptc="res://.godot/imported/ApplesWithKnife_apple_paint.jpeg-bd6aad9a7ca091a61f37267a0d3d6ee8.bptc.ctex"
-path.astc="res://.godot/imported/ApplesWithKnife_apple_paint.jpeg-bd6aad9a7ca091a61f37267a0d3d6ee8.astc.ctex"
+path.s3tc="res://.godot/imported/ApplesWithKnife_apple_paint.jpeg-bd6aad9a7ca091a61f37267a0d3d6ee8.s3tc.ctex"
+path.etc2="res://.godot/imported/ApplesWithKnife_apple_paint.jpeg-bd6aad9a7ca091a61f37267a0d3d6ee8.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -13,15 +13,15 @@ metadata={
 [deps]
 
 source_file="res://3DScenes/AppleTutorial/textures/ApplesWithKnife_apple_paint.jpeg"
-dest_files=["res://.godot/imported/ApplesWithKnife_apple_paint.jpeg-bd6aad9a7ca091a61f37267a0d3d6ee8.bptc.ctex", "res://.godot/imported/ApplesWithKnife_apple_paint.jpeg-bd6aad9a7ca091a61f37267a0d3d6ee8.astc.ctex"]
+dest_files=["res://.godot/imported/ApplesWithKnife_apple_paint.jpeg-bd6aad9a7ca091a61f37267a0d3d6ee8.s3tc.ctex", "res://.godot/imported/ApplesWithKnife_apple_paint.jpeg-bd6aad9a7ca091a61f37267a0d3d6ee8.etc2.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=true
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=2
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1

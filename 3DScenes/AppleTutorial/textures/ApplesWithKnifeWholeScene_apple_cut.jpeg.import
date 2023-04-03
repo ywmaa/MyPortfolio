@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://evafs3mfo2ap"
-path.bptc="res://.godot/imported/ApplesWithKnifeWholeScene_apple_cut.jpeg-6d832ce504693a82fb4058957ca13b1a.bptc.ctex"
-path.astc="res://.godot/imported/ApplesWithKnifeWholeScene_apple_cut.jpeg-6d832ce504693a82fb4058957ca13b1a.astc.ctex"
+path.s3tc="res://.godot/imported/ApplesWithKnifeWholeScene_apple_cut.jpeg-6d832ce504693a82fb4058957ca13b1a.s3tc.ctex"
+path.etc2="res://.godot/imported/ApplesWithKnifeWholeScene_apple_cut.jpeg-6d832ce504693a82fb4058957ca13b1a.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -13,12 +13,12 @@ metadata={
 [deps]
 
 source_file="res://3DScenes/AppleTutorial/textures/ApplesWithKnifeWholeScene_apple_cut.jpeg"
-dest_files=["res://.godot/imported/ApplesWithKnifeWholeScene_apple_cut.jpeg-6d832ce504693a82fb4058957ca13b1a.bptc.ctex", "res://.godot/imported/ApplesWithKnifeWholeScene_apple_cut.jpeg-6d832ce504693a82fb4058957ca13b1a.astc.ctex"]
+dest_files=["res://.godot/imported/ApplesWithKnifeWholeScene_apple_cut.jpeg-6d832ce504693a82fb4058957ca13b1a.s3tc.ctex", "res://.godot/imported/ApplesWithKnifeWholeScene_apple_cut.jpeg-6d832ce504693a82fb4058957ca13b1a.etc2.ctex"]
 
 [params]
 
 compress/mode=2
-compress/high_quality=true
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=1
