@@ -110,6 +110,13 @@ func learning():
 	concept_preview.assign_render_image(load("res://3DScenes/ConceptArt/concept_art.jpeg"))
 	concept_preview.set_note('thanks to "Max Hay" advices about geometry nodes in blender, and geometry nodes tutorials from "Blender Guru", I was able to create this as my first Concept Art in blender')
 	view.add_project_scene(concept_preview)
+	
+	
+	var first_sculpt_preview = preview_3d.instantiate()
+	first_sculpt_preview.assign_render_image(load("res://3DScenes/FirstSculpt/firstSculpt.jpg"))
+	first_sculpt_preview.assign_scene(preload("res://3DScenes/FirstSculpt/first_sculpt.scn").instantiate())
+	first_sculpt_preview.set_note('thanks to "PIXXO 3D" for a tutorial about head sculpting, I was able to create this head.')
+	view.add_project_scene(first_sculpt_preview)
 
 
 #func personal_projects():

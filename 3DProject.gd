@@ -20,8 +20,8 @@ func _process(delta):
 	$Control.position.x = lerp($Control.position.x,lerp(get_viewport().size.x+$Control.size.x,$Control.size.x+4.0,scroll_percentage),delta*10)
 	
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and focus:
-		get_parent().get_parent().scroll_horizontal += -(Input.get_last_mouse_velocity()/100).x
-		get_parent().get_parent().scroll_vertical += -(Input.get_last_mouse_velocity()/100).y
+		get_parent().get_parent().scroll_horizontal += -(Input.get_last_mouse_velocity()/50).x
+		get_parent().get_parent().scroll_vertical += -(Input.get_last_mouse_velocity()/50).y
 	focus = get_global_rect().has_point(get_global_mouse_position())
 
 func _ready():
